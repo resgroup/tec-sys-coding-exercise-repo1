@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
+<body>
+    <h2>Input:</h2>
+    <pre id="input"></pre>
+
+    <h2>Output:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        (function () {
+            const inputEl = document.getElementById('input');
+            const outputEl = document.getElementById('output');
+
+            const input = {
+                referenceDate: '2021-04-01',
+                installedCapacityMW: 30,
+                historic: {
+                    cost: 500000,
+                    referenceDate: '2021-01-01',
+                    inflationRate: 0.1
+                },
+                budget: {
+                    cost: 500000,
+                    costPerMW: 5000,
+                    referenceDate: '2018-01-01',
+                    inflationRate: 0.2
+                },
+                future: {
+                    cost: 1000,
+                    referenceDate: '2021-01-01',
+                    inflationRate: 0.3
+                }
+            };
+
+            inputEl.innerText = JSON.stringify(input, undefined, 2);
+
+            // TODO: call `/api/calculate` to get the result
+            const result = null;
+
+            outputEl.innerText = JSON.stringify(result, undefined, 2);
+        })();
+    </script>
+</body>
+</html>
